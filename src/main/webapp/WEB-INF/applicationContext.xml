@@ -12,6 +12,9 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+    <!--<context:property-placeholder location="/WEB-INF/applicationContext.properties"/>-->
+    <context:property-placeholder location="/WEB-INF/applicationContext-security.properties, /WEB-INF/ormContext.properties"/>
+
     <context:component-scan base-package="ru.sav.app.model"/>
 
     <tx:annotation-driven/>
