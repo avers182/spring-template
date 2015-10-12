@@ -17,13 +17,14 @@
         <intercept-url pattern="/index.jsp" access="permitAll"/>
         <intercept-url pattern="/cas-logout.jsp" access="permitAll"/>
         <intercept-url pattern="/casfailed.jsp" access="permitAll"/>
+        <intercept-url pattern="/logout" access="permitAll"/>
         <intercept-url pattern="/resources/**" access="permitAll"/>
         <intercept-url pattern="/**" access="isAuthenticated()"/>
         <!--<intercept-url pattern="/**" access="hasAnyRole(${cas.roles})"/>-->
         <custom-filter ref="casAuthenticationFilter" position="CAS_FILTER"/>
         <custom-filter ref="requestSingleLogoutFilter" before="LOGOUT_FILTER"/>
         <custom-filter ref="singleSignOutFilter" before="CAS_FILTER"/>
-        <logout logout-success-url="/cas-logout.jsp"/>
+        <logout logout-url="/logout" logout-success-url="/cas-logout.jsp"/>
     </http>
 
     <authentication-manager alias="authenticationManager">

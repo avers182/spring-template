@@ -25,7 +25,7 @@
             <a href="<c:url value="/someurl"/>">some link</a>
         </div>
         <div class="col-md-10">
-            <a href="<c:url value="/j_spring_security_logout"/>">Выйти</a>
+            <a href="<c:url value="/logout"/>">Выйти</a>
         </div>
     </div>
 </div>
